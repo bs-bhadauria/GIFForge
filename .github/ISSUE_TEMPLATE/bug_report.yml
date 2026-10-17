@@ -1,0 +1,50 @@
+name: Bug Report
+description: Create a report to help us improve GIFforge
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report an issue!
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / Surface
+      description: Which surface did this bug occur on?
+      options:
+        - Browser Extension (Chrome)
+        - Browser Extension (Edge)
+        - Browser Extension (Firefox / Other)
+        - VS Code Extension
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: GIFforge Version & Browser / OS Version
+      placeholder: e.g., GIFforge v1.0.0, Chrome 128, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Open GIFforge
+        2. Click 'Custom Region'
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: console-errors
+    attributes:
+      label: Console Errors / Logs
+      description: Paste any error messages from the browser developer console (F12) if applicable.
+      render: shell
